@@ -7,15 +7,32 @@ export default function Header({
     selectedMaterial,
     setSelectedMaterial,
     isAddingMaterial,
-    setIsAddingMaterial
+    setIsAddingMaterial,
+    productType,
+    selectedEthicsTag,
+    setSelectedEthicsTag
 }) {
     const handleBack = () => {
+        if (selectedEthicsTag) {
+            setSelectedEthicsTag(null);
+            return;
+        }
         if (selectedMaterial) setSelectedMaterial(null);
         if (isAddingMaterial) setIsAddingMaterial(false);
     };
 
-    const showBack = selectedMaterial || isAddingMaterial;
-    const title = selectedMaterial ? selectedMaterial.name : isAddingMaterial ? 'Add Material' : 'Product Impact';
+    const showBack = selectedMaterial || isAddingMaterial || selectedEthicsTag;
+
+    let title = 'Product Impact';
+    if (selectedEthicsTag) {
+        title = 'Ethics Detail';
+    } else if (selectedMaterial) {
+        title = selectedMaterial.name;
+    } else if (isAddingMaterial) {
+        title = 'Add Material';
+    } else if (productType) {
+        title = `${productType} Impact`;
+    }
 
     return (
         <div className="relative p-6 pb-4 bg-gradient-to-b from-earth-cream/50 to-transparent border-b border-earth-sage/10">

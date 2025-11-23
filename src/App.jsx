@@ -11,7 +11,7 @@ import CompanyInfo from './components/CompanyInfo';
 import MaterialList from './components/MaterialList';
 import MaterialDetail from './components/MaterialDetail';
 import AddMaterial from './components/AddMaterial';
-import ActionButtons from './components/ActionButtons';
+import EthicsDetail from './components/EthicsDetail';
 
 export default function App() {
   const [isOpen, setIsOpen] = useState(false);
@@ -22,6 +22,7 @@ export default function App() {
   const [searchQuery, setSearchQuery] = useState('');
   const [activeTooltip, setActiveTooltip] = useState(null);
   const [isVisible, setIsVisible] = useState(false);
+  const [selectedEthicsTag, setSelectedEthicsTag] = useState(null);
 
   // Auto-scan on mount and URL change to determine visibility
   useEffect(() => {
@@ -112,6 +113,9 @@ export default function App() {
             setSelectedMaterial={setSelectedMaterial}
             isAddingMaterial={isAddingMaterial}
             setIsAddingMaterial={setIsAddingMaterial}
+            productType={data?.productType}
+            selectedEthicsTag={selectedEthicsTag}
+            setSelectedEthicsTag={setSelectedEthicsTag}
           />
 
           {/* Content */}
@@ -124,14 +128,20 @@ export default function App() {
                 </div>
                 <p className="text-earth-sage animate-pulse font-serif italic">Scanning page for materials...</p>
               </div>
+            ) : selectedEthicsTag ? (
+              <EthicsDetail tag={selectedEthicsTag} onClose={() => setSelectedEthicsTag(null)} />
             ) : selectedMaterial ? (
-              <MaterialDetail selectedMaterial={selectedMaterial} />
+              <MaterialDetail
+                selectedMaterial={selectedMaterial}
+                onBack={() => setSelectedMaterial(null)}
+              />
             ) : isAddingMaterial ? (
               <AddMaterial
                 searchQuery={searchQuery}
                 setSearchQuery={setSearchQuery}
                 filteredMaterials={filteredMaterials}
                 handleAddMaterial={handleAddMaterial}
+                onCancel={() => setIsAddingMaterial(false)}
               />
             ) : data ? (
               !data.isApplicable && !isAddingMaterial ? (
@@ -163,7 +173,11 @@ export default function App() {
                     setActiveTooltip={setActiveTooltip}
                   />
 
-                  <CompanyInfo data={data} />
+                  <CompanyInfo
+                    data={data}
+                    selectedEthicsTag={selectedEthicsTag}
+                    setSelectedEthicsTag={setSelectedEthicsTag}
+                  />
 
                   <MaterialList
                     data={data}
@@ -171,7 +185,6 @@ export default function App() {
                     setIsAddingMaterial={setIsAddingMaterial}
                   />
 
-                  <ActionButtons data={data} />
                 </div>
               )
             ) : null}

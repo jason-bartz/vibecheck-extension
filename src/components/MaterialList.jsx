@@ -4,7 +4,7 @@ import { Plus } from 'lucide-react';
 export default function MaterialList({ data, setSelectedMaterial, setIsAddingMaterial }) {
     return (
         <div className="space-y-2">
-            <h3 className="text-sm font-semibold text-earth-sage font-sans uppercase tracking-wider">Materials (Click for details)</h3>
+            <h3 className="text-sm font-semibold text-earth-sage font-sans tracking-wide">Materials (Click for details)</h3>
             <div className="flex flex-wrap gap-2">
                 {data.materials.map((m, i) => (
                     <button

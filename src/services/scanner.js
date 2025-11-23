@@ -8,7 +8,9 @@ export const MATERIAL_DB = {
         impact: 'Uses 91% less water than conventional cotton and produces 46% fewer greenhouse gas emissions.',
         water_intensity: 'Low',
         carbon_intensity: 'Low',
-        biodegradable: 'Yes'
+        biodegradable: 'Yes',
+        carbon_kg: 1.8,  // kg CO2e per kg of fabric
+        water_liters: 5000  // liters per kg of fabric
     },
     'recycled polyester': {
         score: 85,
@@ -17,7 +19,9 @@ export const MATERIAL_DB = {
         impact: 'Reduces energy consumption by 59% compared to virgin polyester and lowers carbon emissions.',
         water_intensity: 'Medium',
         carbon_intensity: 'Medium',
-        biodegradable: 'No'
+        biodegradable: 'No',
+        carbon_kg: 3.5,  // 59% less than virgin polyester
+        water_liters: 200
     },
     'hemp': {
         score: 95,
@@ -26,7 +30,9 @@ export const MATERIAL_DB = {
         impact: 'Absorbs more CO2 per hectare than any forest or commercial crop. Returns nutrients to the soil.',
         water_intensity: 'Very Low',
         carbon_intensity: 'Very Low',
-        biodegradable: 'Yes'
+        biodegradable: 'Yes',
+        carbon_kg: 0.8,  // Carbon negative crop
+        water_liters: 2500
     },
     'linen': {
         score: 90,
@@ -35,7 +41,9 @@ export const MATERIAL_DB = {
         impact: 'Flax can grow in poor soil without irrigation. The entire plant is used, resulting in zero waste.',
         water_intensity: 'Low',
         carbon_intensity: 'Low',
-        biodegradable: 'Yes'
+        biodegradable: 'Yes',
+        carbon_kg: 1.2,
+        water_liters: 2500
     },
     'tencel': {
         score: 85,
@@ -44,7 +52,9 @@ export const MATERIAL_DB = {
         impact: '99% of the water and solvents used in the process are recovered and reused.',
         water_intensity: 'Low',
         carbon_intensity: 'Low',
-        biodegradable: 'Yes'
+        biodegradable: 'Yes',
+        carbon_kg: 2.0,
+        water_liters: 1000
     },
     'lyocell': {
         score: 85,
@@ -53,7 +63,9 @@ export const MATERIAL_DB = {
         impact: 'Closed-loop production process recycles almost all solvents used.',
         water_intensity: 'Low',
         carbon_intensity: 'Low',
-        biodegradable: 'Yes'
+        biodegradable: 'Yes',
+        carbon_kg: 2.0,
+        water_liters: 1000
     },
     'cotton': {
         score: 60,
@@ -62,7 +74,9 @@ export const MATERIAL_DB = {
         impact: 'Requires heavy irrigation and accounts for 16% of global insecticide use.',
         water_intensity: 'High',
         carbon_intensity: 'Medium',
-        biodegradable: 'Yes'
+        biodegradable: 'Yes',
+        carbon_kg: 5.5,  // Conventional cotton
+        water_liters: 10000
     },
     'bamboo': {
         score: 80,
@@ -71,7 +85,9 @@ export const MATERIAL_DB = {
         impact: 'Can be sustainable, but chemical processing (viscose method) can be harmful if not managed well.',
         water_intensity: 'Low',
         carbon_intensity: 'Low',
-        biodegradable: 'Yes'
+        biodegradable: 'Yes',
+        carbon_kg: 2.5,
+        water_liters: 3000
     },
     'polyester': {
         score: 30,
@@ -80,7 +96,9 @@ export const MATERIAL_DB = {
         impact: 'Energy-intensive production. Sheds microplastics into water systems with every wash.',
         water_intensity: 'Medium',
         carbon_intensity: 'High',
-        biodegradable: 'No'
+        biodegradable: 'No',
+        carbon_kg: 8.5,  // Virgin polyester
+        water_liters: 300
     },
     'nylon': {
         score: 25,
@@ -89,7 +107,9 @@ export const MATERIAL_DB = {
         impact: 'Nitrous oxide is a greenhouse gas 300x more potent than CO2. Also sheds microplastics.',
         water_intensity: 'High',
         carbon_intensity: 'Very High',
-        biodegradable: 'No'
+        biodegradable: 'No',
+        carbon_kg: 12.0,  // Very high due to N2O emissions
+        water_liters: 500
     },
     'acrylic': {
         score: 20,
@@ -98,7 +118,9 @@ export const MATERIAL_DB = {
         impact: 'Production involves highly toxic chemicals. Releases huge amounts of microplastics.',
         water_intensity: 'Medium',
         carbon_intensity: 'High',
-        biodegradable: 'No'
+        biodegradable: 'No',
+        carbon_kg: 10.0,
+        water_liters: 400
     },
     'spandex': {
         score: 30,
@@ -107,7 +129,9 @@ export const MATERIAL_DB = {
         impact: 'Petroleum-based and energy-intensive. Makes recycling blended fabrics very difficult.',
         water_intensity: 'Medium',
         carbon_intensity: 'Medium',
-        biodegradable: 'No'
+        biodegradable: 'No',
+        carbon_kg: 6.5,  // Similar to polyester, petroleum-based
+        water_liters: 350
     },
     'elastane': {
         score: 30,
@@ -116,7 +140,9 @@ export const MATERIAL_DB = {
         impact: 'Derived from fossil fuels. Non-biodegradable and energy intensive to produce.',
         water_intensity: 'Medium',
         carbon_intensity: 'Medium',
-        biodegradable: 'No'
+        biodegradable: 'No',
+        carbon_kg: 6.5,  // Same as spandex
+        water_liters: 350
     },
     'viscose': {
         score: 40,
@@ -125,7 +151,9 @@ export const MATERIAL_DB = {
         impact: 'Can contribute to deforestation. Chemical waste often pollutes local water sources.',
         water_intensity: 'High',
         carbon_intensity: 'Medium',
-        biodegradable: 'Yes'
+        biodegradable: 'Yes',
+        carbon_kg: 4.5,  // Semi-synthetic, chemical processing
+        water_liters: 6000
     },
     'rayon': {
         score: 35,
@@ -134,7 +162,9 @@ export const MATERIAL_DB = {
         impact: 'Similar to viscose, the production process is chemically intensive and polluting.',
         water_intensity: 'High',
         carbon_intensity: 'Medium',
-        biodegradable: 'Yes'
+        biodegradable: 'Yes',
+        carbon_kg: 4.5,  // Similar to viscose
+        water_liters: 6000
     },
     'wool': {
         score: 65,
@@ -143,7 +173,9 @@ export const MATERIAL_DB = {
         impact: 'Sheep produce methane (greenhouse gas). Overgrazing can lead to land degradation.',
         water_intensity: 'Medium',
         carbon_intensity: 'High',
-        biodegradable: 'Yes'
+        biodegradable: 'Yes',
+        carbon_kg: 10.5,  // High due to methane emissions from sheep
+        water_liters: 4500
     },
     'leather': {
         score: 40,
@@ -161,107 +193,186 @@ export const MATERIAL_DB = {
         impact: 'Mulberry trees (food for silkworms) sequester carbon. Processing requires high energy.',
         water_intensity: 'High',
         carbon_intensity: 'Low',
-        biodegradable: 'Yes'
+        biodegradable: 'Yes',
+        carbon_kg: 3.0,  // Lower carbon, but energy-intensive processing
+        water_liters: 8000
     },
     // --- Natural Plant-Based ---
-    'pima cotton': { score: 65, type: 'Natural', description: 'High-quality cotton with longer fibers. Durable but resource-intensive.', impact: 'Similar to conventional cotton, requires significant water and pesticides.', water_intensity: 'High', carbon_intensity: 'Medium', biodegradable: 'Yes' },
-    'egyptian cotton': { score: 65, type: 'Natural', description: 'Premium cotton from the Nile Delta. Luxurious but water-thirsty.', impact: 'Grown in arid regions requiring heavy irrigation.', water_intensity: 'Very High', carbon_intensity: 'Medium', biodegradable: 'Yes' },
-    'jute': { score: 95, type: 'Natural', description: 'The "Golden Fiber". Rain-fed crop with little need for fertilizer or pesticides.', impact: 'Absorbs CO2 and enriches the soil. Completely biodegradable.', water_intensity: 'Low', carbon_intensity: 'Very Low', biodegradable: 'Yes' },
-    'ramie': { score: 85, type: 'Natural', description: 'One of the oldest fiber crops. Strong, durable, and resistant to bacteria.', impact: 'Requires chemical processing to de-gum the fibers.', water_intensity: 'Medium', carbon_intensity: 'Low', biodegradable: 'Yes' },
-    'sisal': { score: 90, type: 'Natural', description: 'Derived from the agave plant. Very durable and renewable.', impact: 'Grows in arid lands, no pesticides needed.', water_intensity: 'Low', carbon_intensity: 'Low', biodegradable: 'Yes' },
-    'kapok': { score: 95, type: 'Natural', description: 'Silky fiber from the Ceiba tree fruit. Naturally buoyant and thermal.', impact: 'Wild harvested, no pesticides or irrigation needed.', water_intensity: 'Low', carbon_intensity: 'Very Low', biodegradable: 'Yes' },
-    'piña': { score: 90, type: 'Natural', description: 'Made from pineapple leaf fibers (agricultural waste).', impact: 'Upcycles waste product. No additional land or water needed.', water_intensity: 'Low', carbon_intensity: 'Low', biodegradable: 'Yes' },
-    'banana fiber': { score: 90, type: 'Natural', description: 'Extracted from banana tree stems (waste). Strong and biodegradable.', impact: 'Reduces agricultural waste. Minimal processing.', water_intensity: 'Low', carbon_intensity: 'Low', biodegradable: 'Yes' },
-    'nettle fiber': { score: 95, type: 'Natural', description: 'Wild-harvested or sustainably farmed. Similar to linen.', impact: 'Grows without pesticides or irrigation. Improves soil biodiversity.', water_intensity: 'Low', carbon_intensity: 'Very Low', biodegradable: 'Yes' },
-    'abaca': { score: 90, type: 'Natural', description: 'Manila hemp. Very strong and resistant to saltwater damage.', impact: 'Sustainable crop that prevents soil erosion.', water_intensity: 'Medium', carbon_intensity: 'Low', biodegradable: 'Yes' },
-    'coir': { score: 90, type: 'Natural', description: 'Fiber from coconut husks. Durable and rot-resistant.', impact: 'Utilizes waste product from coconut industry.', water_intensity: 'Low', carbon_intensity: 'Low', biodegradable: 'Yes' },
+    'pima cotton': { score: 65, type: 'Natural', description: 'High-quality cotton with longer fibers. Durable but resource-intensive.', impact: 'Similar to conventional cotton, requires significant water and pesticides.', water_intensity: 'High', carbon_intensity: 'Medium', biodegradable: 'Yes', carbon_kg: 5.5, water_liters: 10000 },
+    'egyptian cotton': { score: 65, type: 'Natural', description: 'Premium cotton from the Nile Delta. Luxurious but water-thirsty.', impact: 'Grown in arid regions requiring heavy irrigation.', water_intensity: 'Very High', carbon_intensity: 'Medium', biodegradable: 'Yes', carbon_kg: 6.0, water_liters: 12000 },
+    'jute': { score: 95, type: 'Natural', description: 'The "Golden Fiber". Rain-fed crop with little need for fertilizer or pesticides.', impact: 'Absorbs CO2 and enriches the soil. Completely biodegradable.', water_intensity: 'Low', carbon_intensity: 'Very Low', biodegradable: 'Yes', carbon_kg: 0.7, water_liters: 2000 },
+    'ramie': { score: 85, type: 'Natural', description: 'One of the oldest fiber crops. Strong, durable, and resistant to bacteria.', impact: 'Requires chemical processing to de-gum the fibers.', water_intensity: 'Medium', carbon_intensity: 'Low', biodegradable: 'Yes', carbon_kg: 1.5, water_liters: 3500 },
+    'sisal': { score: 90, type: 'Natural', description: 'Derived from the agave plant. Very durable and renewable.', impact: 'Grows in arid lands, no pesticides needed.', water_intensity: 'Low', carbon_intensity: 'Low', biodegradable: 'Yes', carbon_kg: 1.0, water_liters: 2000 },
+    'kapok': { score: 95, type: 'Natural', description: 'Silky fiber from the Ceiba tree fruit. Naturally buoyant and thermal.', impact: 'Wild harvested, no pesticides or irrigation needed.', water_intensity: 'Low', carbon_intensity: 'Very Low', biodegradable: 'Yes', carbon_kg: 0.6, water_liters: 1500 },
+    'piña': { score: 90, type: 'Natural', description: 'Made from pineapple leaf fibers (agricultural waste).', impact: 'Upcycles waste product. No additional land or water needed.', water_intensity: 'Low', carbon_intensity: 'Low', biodegradable: 'Yes', carbon_kg: 0.9, water_liters: 1000 },
+    'banana fiber': { score: 90, type: 'Natural', description: 'Extracted from banana tree stems (waste). Strong and biodegradable.', impact: 'Reduces agricultural waste. Minimal processing.', water_intensity: 'Low', carbon_intensity: 'Low', biodegradable: 'Yes', carbon_kg: 0.9, water_liters: 1000 },
+    'nettle fiber': { score: 95, type: 'Natural', description: 'Wild-harvested or sustainably farmed. Similar to linen.', impact: 'Grows without pesticides or irrigation. Improves soil biodiversity.', water_intensity: 'Low', carbon_intensity: 'Very Low', biodegradable: 'Yes', carbon_kg: 0.8, water_liters: 2000 },
+    'abaca': { score: 90, type: 'Natural', description: 'Manila hemp. Very strong and resistant to saltwater damage.', impact: 'Sustainable crop that prevents soil erosion.', water_intensity: 'Medium', carbon_intensity: 'Low', biodegradable: 'Yes', carbon_kg: 1.2, water_liters: 3000 },
+    'coir': { score: 90, type: 'Natural', description: 'Fiber from coconut husks. Durable and rot-resistant.', impact: 'Utilizes waste product from coconut industry.', water_intensity: 'Low', carbon_intensity: 'Low', biodegradable: 'Yes', carbon_kg: 1.0, water_liters: 1500 },
 
     // --- Natural Animal-Based ---
-    'merino wool': { score: 70, type: 'Animal', description: 'Fine, soft wool. Renewable but land-intensive.', impact: 'Methane emissions from sheep. Land use concerns.', water_intensity: 'Medium', carbon_intensity: 'High', biodegradable: 'Yes' },
-    'lambswool': { score: 70, type: 'Animal', description: 'Soft wool from the first shearing. Renewable.', impact: 'Similar impact to general wool.', water_intensity: 'Medium', carbon_intensity: 'High', biodegradable: 'Yes' },
-    'cashmere': { score: 50, type: 'Animal', description: 'Soft fiber from cashmere goats. High demand causes overgrazing.', impact: 'Overgrazing leads to desertification in Mongolia/China.', water_intensity: 'Medium', carbon_intensity: 'High', biodegradable: 'Yes' },
-    'mohair': { score: 55, type: 'Animal', description: 'From Angora goats. Durable and lustrous.', impact: 'Land degradation issues. Ethical concerns in some supply chains.', water_intensity: 'Medium', carbon_intensity: 'High', biodegradable: 'Yes' },
-    'alpaca': { score: 75, type: 'Animal', description: 'Soft, warm fiber. Alpacas are gentle on the land (soft pads, not hooves).', impact: 'More efficient than sheep. Lower methane emissions.', water_intensity: 'Low', carbon_intensity: 'Medium', biodegradable: 'Yes' },
-    'angora': { score: 40, type: 'Animal', description: 'From Angora rabbits. Extremely soft.', impact: 'Major ethical concerns regarding animal welfare (plucking).', water_intensity: 'Medium', carbon_intensity: 'Medium', biodegradable: 'Yes' },
-    'camel hair': { score: 70, type: 'Animal', description: 'Collected when camels molt naturally.', impact: 'Sustainable harvesting, but livestock impact exists.', water_intensity: 'Low', carbon_intensity: 'Medium', biodegradable: 'Yes' },
-    'vicuña': { score: 80, type: 'Animal', description: 'Rare, wild-harvested wool. Extremely fine.', impact: 'Wild animals sheared alive and released. Sustainable management key.', water_intensity: 'Low', carbon_intensity: 'Low', biodegradable: 'Yes' },
-    'llama': { score: 75, type: 'Animal', description: 'Coarser than alpaca but very durable.', impact: 'Low environmental footprint.', water_intensity: 'Low', carbon_intensity: 'Medium', biodegradable: 'Yes' },
-    'qiviut': { score: 80, type: 'Animal', description: 'Underwool of the musk ox. Warmer than wool.', impact: 'Sustainably harvested from wild or farmed herds.', water_intensity: 'Low', carbon_intensity: 'Low', biodegradable: 'Yes' },
-    'yak wool': { score: 75, type: 'Animal', description: 'Soft undercoat of yaks. Renewable.', impact: 'Low impact traditional herding.', water_intensity: 'Low', carbon_intensity: 'Medium', biodegradable: 'Yes' },
-    'cowhide': { score: 40, type: 'Animal', description: 'Standard leather. Byproduct of meat industry but tanning is toxic.', impact: 'High carbon footprint (cattle). Chrome tanning pollution.', water_intensity: 'Very High', carbon_intensity: 'Very High', biodegradable: 'Partially' },
-    'sheepskin': { score: 40, type: 'Animal', description: 'Leather with wool attached.', impact: 'Similar to leather/wool impacts.', water_intensity: 'High', carbon_intensity: 'High', biodegradable: 'Partially' },
-    'suede': { score: 40, type: 'Animal', description: 'Underside of animal skin. Soft but fragile.', impact: 'Same environmental costs as leather.', water_intensity: 'Very High', carbon_intensity: 'Very High', biodegradable: 'Partially' },
-    'fur': { score: 10, type: 'Animal', description: 'Animal pelt with hair. High ethical and environmental cost.', impact: 'Energy intensive processing. Ethical concerns.', water_intensity: 'High', carbon_intensity: 'High', biodegradable: 'Yes' },
-    'shearling': { score: 40, type: 'Animal', description: 'Sheepskin tanned with wool left on.', impact: 'Tanning chemicals and livestock impact.', water_intensity: 'High', carbon_intensity: 'High', biodegradable: 'Partially' },
-    'down': { score: 50, type: 'Animal', description: 'Duck/goose feathers. Natural insulator.', impact: 'Live-plucking ethical concerns. Processing water use.', water_intensity: 'High', carbon_intensity: 'Medium', biodegradable: 'Yes' },
-    'feathers': { score: 50, type: 'Animal', description: 'Decorative or insulating.', impact: 'Ethical concerns.', water_intensity: 'Medium', carbon_intensity: 'Medium', biodegradable: 'Yes' },
+    'merino wool': { score: 70, type: 'Animal', description: 'Fine, soft wool. Renewable but land-intensive.', impact: 'Methane emissions from sheep. Land use concerns.', water_intensity: 'Medium', carbon_intensity: 'High', biodegradable: 'Yes', carbon_kg: 10.5, water_liters: 4500 },
+    'lambswool': { score: 70, type: 'Animal', description: 'Soft wool from the first shearing. Renewable.', impact: 'Similar impact to general wool.', water_intensity: 'Medium', carbon_intensity: 'High', biodegradable: 'Yes', carbon_kg: 10.5, water_liters: 4500 },
+    'cashmere': { score: 50, type: 'Animal', description: 'Soft fiber from cashmere goats. High demand causes overgrazing.', impact: 'Overgrazing leads to desertification in Mongolia/China.', water_intensity: 'Medium', carbon_intensity: 'High', biodegradable: 'Yes', carbon_kg: 12.0, water_liters: 5000 },
+    'mohair': { score: 55, type: 'Animal', description: 'From Angora goats. Durable and lustrous.', impact: 'Land degradation issues. Ethical concerns in some supply chains.', water_intensity: 'Medium', carbon_intensity: 'High', biodegradable: 'Yes', carbon_kg: 11.0, water_liters: 4800 },
+    'alpaca': { score: 75, type: 'Animal', description: 'Soft, warm fiber. Alpacas are gentle on the land (soft pads, not hooves).', impact: 'More efficient than sheep. Lower methane emissions.', water_intensity: 'Low', carbon_intensity: 'Medium', biodegradable: 'Yes', carbon_kg: 7.0, water_liters: 3500 },
+    'angora': { score: 40, type: 'Animal', description: 'From Angora rabbits. Extremely soft.', impact: 'Major ethical concerns regarding animal welfare (plucking).', water_intensity: 'Medium', carbon_intensity: 'Medium', biodegradable: 'Yes', carbon_kg: 6.0, water_liters: 4000 },
+    'camel hair': { score: 70, type: 'Animal', description: 'Collected when camels molt naturally.', impact: 'Sustainable harvesting, but livestock impact exists.', water_intensity: 'Low', carbon_intensity: 'Medium', biodegradable: 'Yes', carbon_kg: 7.5, water_liters: 3800 },
+    'vicuña': { score: 80, type: 'Animal', description: 'Rare, wild-harvested wool. Extremely fine.', impact: 'Wild animals sheared alive and released. Sustainable management key.', water_intensity: 'Low', carbon_intensity: 'Low', biodegradable: 'Yes', carbon_kg: 4.0, water_liters: 2500 },
+    'llama': { score: 75, type: 'Animal', description: 'Coarser than alpaca but very durable.', impact: 'Low environmental footprint.', water_intensity: 'Low', carbon_intensity: 'Medium', biodegradable: 'Yes', carbon_kg: 7.0, water_liters: 3500 },
+    'qiviut': { score: 80, type: 'Animal', description: 'Underwool of the musk ox. Warmer than wool.', impact: 'Sustainably harvested from wild or farmed herds.', water_intensity: 'Low', carbon_intensity: 'Low', biodegradable: 'Yes', carbon_kg: 5.0, water_liters: 3000 },
+    'yak wool': { score: 75, type: 'Animal', description: 'Soft undercoat of yaks. Renewable.', impact: 'Low impact traditional herding.', water_intensity: 'Low', carbon_intensity: 'Medium', biodegradable: 'Yes', carbon_kg: 7.5, water_liters: 3800 },
+    'cowhide': { score: 40, type: 'Animal', description: 'Standard leather. Byproduct of meat industry but tanning is toxic.', impact: 'High carbon footprint (cattle). Chrome tanning pollution.', water_intensity: 'Very High', carbon_intensity: 'Very High', biodegradable: 'Partially', carbon_kg: 17.0, water_liters: 17000 },
+    'sheepskin': { score: 40, type: 'Animal', description: 'Leather with wool attached.', impact: 'Similar to leather/wool impacts.', water_intensity: 'High', carbon_intensity: 'High', biodegradable: 'Partially', carbon_kg: 14.0, water_liters: 12000 },
+    'suede': { score: 40, type: 'Animal', description: 'Underside of animal skin. Soft but fragile.', impact: 'Same environmental costs as leather.', water_intensity: 'Very High', carbon_intensity: 'Very High', biodegradable: 'Partially', carbon_kg: 17.0, water_liters: 17000 },
+    'fur': { score: 10, type: 'Animal', description: 'Animal pelt with hair. High ethical and environmental cost.', impact: 'Energy intensive processing. Ethical concerns.', water_intensity: 'High', carbon_intensity: 'High', biodegradable: 'Yes', carbon_kg: 15.0, water_liters: 10000 },
+    'shearling': { score: 40, type: 'Animal', description: 'Sheepskin tanned with wool left on.', impact: 'Tanning chemicals and livestock impact.', water_intensity: 'High', carbon_intensity: 'High', biodegradable: 'Partially', carbon_kg: 14.0, water_liters: 12000 },
+    'down': { score: 50, type: 'Animal', description: 'Duck/goose feathers. Natural insulator.', impact: 'Live-plucking ethical concerns. Processing water use.', water_intensity: 'High', carbon_intensity: 'Medium', biodegradable: 'Yes', carbon_kg: 6.0, water_liters: 7000 },
+    'feathers': { score: 50, type: 'Animal', description: 'Decorative or insulating.', impact: 'Ethical concerns.', water_intensity: 'Medium', carbon_intensity: 'Medium', biodegradable: 'Yes', carbon_kg: 5.0, water_liters: 5000 },
 
     // --- Semi-Synthetic/Cellulose-Based ---
-    'modal': { score: 60, type: 'Semi-Synthetic', description: 'Type of rayon from beech trees. Softer and more durable.', impact: 'Beech trees require less water, but chemical processing is needed.', water_intensity: 'Medium', carbon_intensity: 'Medium', biodegradable: 'Yes' },
-    'cupro': { score: 65, type: 'Semi-Synthetic', description: 'Regenerated cellulose from cotton linter (waste).', impact: 'Uses waste product, but production uses copper and ammonia.', water_intensity: 'High', carbon_intensity: 'Medium', biodegradable: 'Yes' },
-    'acetate': { score: 35, type: 'Semi-Synthetic', description: 'Wood pulp processed with acetic acid.', impact: 'Chemical intensive. Often not biodegradable due to additives.', water_intensity: 'High', carbon_intensity: 'Medium', biodegradable: 'No' },
-    'triacetate': { score: 30, type: 'Semi-Synthetic', description: 'Chemically treated acetate. More heat resistant.', impact: 'Heavy chemical use. Not biodegradable.', water_intensity: 'High', carbon_intensity: 'High', biodegradable: 'No' },
+    'modal': { score: 60, type: 'Semi-Synthetic', description: 'Type of rayon from beech trees. Softer and more durable.', impact: 'Beech trees require less water, but chemical processing is needed.', water_intensity: 'Medium', carbon_intensity: 'Medium', biodegradable: 'Yes', carbon_kg: 3.5, water_liters: 5000 },
+    'cupro': { score: 65, type: 'Semi-Synthetic', description: 'Regenerated cellulose from cotton linter (waste).', impact: 'Uses waste product, but production uses copper and ammonia.', water_intensity: 'High', carbon_intensity: 'Medium', biodegradable: 'Yes', carbon_kg: 3.0, water_liters: 7000 },
+    'acetate': { score: 35, type: 'Semi-Synthetic', description: 'Wood pulp processed with acetic acid.', impact: 'Chemical intensive. Often not biodegradable due to additives.', water_intensity: 'High', carbon_intensity: 'Medium', biodegradable: 'No', carbon_kg: 5.0, water_liters: 7500 },
+    'triacetate': { score: 30, type: 'Semi-Synthetic', description: 'Chemically treated acetate. More heat resistant.', impact: 'Heavy chemical use. Not biodegradable.', water_intensity: 'High', carbon_intensity: 'High', biodegradable: 'No', carbon_kg: 5.5, water_liters: 8000 },
 
     // --- Synthetic/Petroleum-Based ---
-    'polypropylene': { score: 40, type: 'Synthetic', description: 'Thermoplastic polymer. Lightweight and moisture wicking.', impact: 'Fossil fuel based. Recyclable but often isn\'t.', water_intensity: 'Low', carbon_intensity: 'Medium', biodegradable: 'No' },
-    'olefin': { score: 40, type: 'Synthetic', description: 'Another name for polypropylene/polyethylene fibers.', impact: 'Low energy to produce but plastic based.', water_intensity: 'Low', carbon_intensity: 'Medium', biodegradable: 'No' },
-    'polyethylene': { score: 35, type: 'Synthetic', description: 'Common plastic. Used in some textiles.', impact: 'Fossil fuel based. Microplastic pollution.', water_intensity: 'Low', carbon_intensity: 'Medium', biodegradable: 'No' },
-    'pvc': { score: 10, type: 'Synthetic', description: 'Polyvinyl Chloride. "Vinyl" clothing.', impact: 'Releases toxic chlorine/dioxins during production and disposal.', water_intensity: 'Medium', carbon_intensity: 'Very High', biodegradable: 'No' },
-    'vinyl': { score: 10, type: 'Synthetic', description: 'PVC fabric. Shiny and waterproof.', impact: 'Highly toxic lifecycle.', water_intensity: 'Medium', carbon_intensity: 'Very High', biodegradable: 'No' },
-    'lurex': { score: 20, type: 'Synthetic', description: 'Yarn with metallic appearance. Plastic/metal laminate.', impact: 'Impossible to recycle. Microplastic shedding.', water_intensity: 'Medium', carbon_intensity: 'High', biodegradable: 'No' },
-    'kevlar': { score: 40, type: 'Synthetic', description: 'High-strength synthetic fiber.', impact: 'Energy intensive production. Durable (long life).', water_intensity: 'High', carbon_intensity: 'High', biodegradable: 'No' },
-    'gore-tex': { score: 20, type: 'Synthetic', description: 'Waterproof membrane (PTFE).', impact: 'Often uses PFAS ("forever chemicals"). Very hard to recycle.', water_intensity: 'High', carbon_intensity: 'High', biodegradable: 'No' },
-    'fleece': { score: 30, type: 'Synthetic', description: 'Soft insulating fabric, usually polyester.', impact: 'Major source of microplastic pollution in oceans.', water_intensity: 'Medium', carbon_intensity: 'High', biodegradable: 'No' },
+    'polypropylene': { score: 40, type: 'Synthetic', description: 'Thermoplastic polymer. Lightweight and moisture wicking.', impact: 'Fossil fuel based. Recyclable but often isn\'t.', water_intensity: 'Low', carbon_intensity: 'Medium', biodegradable: 'No', carbon_kg: 6.0, water_liters: 250 },
+    'olefin': { score: 40, type: 'Synthetic', description: 'Another name for polypropylene/polyethylene fibers.', impact: 'Low energy to produce but plastic based.', water_intensity: 'Low', carbon_intensity: 'Medium', biodegradable: 'No', carbon_kg: 6.0, water_liters: 250 },
+    'polyethylene': { score: 35, type: 'Synthetic', description: 'Common plastic. Used in some textiles.', impact: 'Fossil fuel based. Microplastic pollution.', water_intensity: 'Low', carbon_intensity: 'Medium', biodegradable: 'No', carbon_kg: 5.5, water_liters: 200 },
+    'pvc': { score: 10, type: 'Synthetic', description: 'Polyvinyl Chloride. "Vinyl" clothing.', impact: 'Releases toxic chlorine/dioxins during production and disposal.', water_intensity: 'Medium', carbon_intensity: 'Very High', biodegradable: 'No', carbon_kg: 14.0, water_liters: 600 },
+    'vinyl': { score: 10, type: 'Synthetic', description: 'PVC fabric. Shiny and waterproof.', impact: 'Highly toxic lifecycle.', water_intensity: 'Medium', carbon_intensity: 'Very High', biodegradable: 'No', carbon_kg: 14.0, water_liters: 600 },
+    'lurex': { score: 20, type: 'Synthetic', description: 'Yarn with metallic appearance. Plastic/metal laminate.', impact: 'Impossible to recycle. Microplastic shedding.', water_intensity: 'Medium', carbon_intensity: 'High', biodegradable: 'No', carbon_kg: 9.0, water_liters: 400 },
+    'kevlar': { score: 40, type: 'Synthetic', description: 'High-strength synthetic fiber.', impact: 'Energy intensive production. Durable (long life).', water_intensity: 'High', carbon_intensity: 'High', biodegradable: 'No', carbon_kg: 11.0, water_liters: 800 },
+    'gore-tex': { score: 20, type: 'Synthetic', description: 'Waterproof membrane (PTFE).', impact: 'Often uses PFAS ("forever chemicals"). Very hard to recycle.', water_intensity: 'High', carbon_intensity: 'High', biodegradable: 'No', carbon_kg: 13.0, water_liters: 900 },
+    'fleece': { score: 30, type: 'Synthetic', description: 'Soft insulating fabric, usually polyester.', impact: 'Major source of microplastic pollution in oceans.', water_intensity: 'Medium', carbon_intensity: 'High', biodegradable: 'No', carbon_kg: 8.5, water_liters: 300 },
 
     // --- Specialty & Emerging ---
-    'vegan leather': { score: 60, type: 'Synthetic', description: 'Often PU or PVC based (plastic).', impact: 'Cruelty-free but often plastic pollution. Check for bio-based.', water_intensity: 'Medium', carbon_intensity: 'Medium', biodegradable: 'No' },
-    'mushroom leather': { score: 90, type: 'Specialty', description: 'Mycelium-based leather alternative.', impact: 'Grown in labs/vertical farms. Low land/water use. Biodegradable.', water_intensity: 'Low', carbon_intensity: 'Low', biodegradable: 'Yes' },
-    'cactus leather': { score: 85, type: 'Specialty', description: 'Made from Nopal cactus.', impact: 'Cactus needs little water. Partial plastic binders often used.', water_intensity: 'Very Low', carbon_intensity: 'Low', biodegradable: 'Partially' },
-    'apple leather': { score: 80, type: 'Specialty', description: 'Made from apple juice industry waste.', impact: 'Upcycles waste. Usually mixed with PU (plastic).', water_intensity: 'Low', carbon_intensity: 'Low', biodegradable: 'Partially' },
-    'seacell': { score: 90, type: 'Specialty', description: 'Lyocell embedded with seaweed.', impact: 'Seaweed is renewable and regenerative.', water_intensity: 'Low', carbon_intensity: 'Low', biodegradable: 'Yes' },
-    'soy fiber': { score: 80, type: 'Specialty', description: 'Protein fiber from soybean waste (tofu production).', impact: 'Upcycles waste. Chemical processing required.', water_intensity: 'Medium', carbon_intensity: 'Low', biodegradable: 'Yes' },
-    'milk fiber': { score: 70, type: 'Specialty', description: 'Made from waste milk casein.', impact: 'Uses dairy waste but chemical intensive.', water_intensity: 'High', carbon_intensity: 'Medium', biodegradable: 'Yes' },
-    'spider silk': { score: 85, type: 'Specialty', description: 'Lab-grown protein fiber mimicking spider silk.', impact: 'Fermentation based. No animals involved. Strong and biodegradable.', water_intensity: 'Low', carbon_intensity: 'Low', biodegradable: 'Yes' },
-    'recycled ocean plastic': { score: 90, type: 'Recycled', description: 'Plastic harvested from oceans/beaches.', impact: 'Cleans up environment. Energy intensive recycling.', water_intensity: 'Medium', carbon_intensity: 'Low', biodegradable: 'No' },
-    'cork': { score: 95, type: 'Natural', description: 'Bark of cork oak. Harvested without killing tree.', impact: 'Trees absorb more CO2 after harvesting. Renewable.', water_intensity: 'Low', carbon_intensity: 'Very Low', biodegradable: 'Yes' },
+    'vegan leather': { score: 60, type: 'Synthetic', description: 'Often PU or PVC based (plastic).', impact: 'Cruelty-free but often plastic pollution. Check for bio-based.', water_intensity: 'Medium', carbon_intensity: 'Medium', biodegradable: 'No', carbon_kg: 7.0, water_liters: 500 },
+    'mushroom leather': { score: 90, type: 'Specialty', description: 'Mycelium-based leather alternative.', impact: 'Grown in labs/vertical farms. Low land/water use. Biodegradable.', water_intensity: 'Low', carbon_intensity: 'Low', biodegradable: 'Yes', carbon_kg: 1.5, water_liters: 800 },
+    'cactus leather': { score: 85, type: 'Specialty', description: 'Made from Nopal cactus.', impact: 'Cactus needs little water. Partial plastic binders often used.', water_intensity: 'Very Low', carbon_intensity: 'Low', biodegradable: 'Partially', carbon_kg: 2.0, water_liters: 600 },
+    'apple leather': { score: 80, type: 'Specialty', description: 'Made from apple juice industry waste.', impact: 'Upcycles waste. Usually mixed with PU (plastic).', water_intensity: 'Low', carbon_intensity: 'Low', biodegradable: 'Partially', carbon_kg: 2.5, water_liters: 700 },
+    'seacell': { score: 90, type: 'Specialty', description: 'Lyocell embedded with seaweed.', impact: 'Seaweed is renewable and regenerative.', water_intensity: 'Low', carbon_intensity: 'Low', biodegradable: 'Yes', carbon_kg: 1.8, water_liters: 1000 },
+    'soy fiber': { score: 80, type: 'Specialty', description: 'Protein fiber from soybean waste (tofu production).', impact: 'Upcycles waste. Chemical processing required.', water_intensity: 'Medium', carbon_intensity: 'Low', biodegradable: 'Yes', carbon_kg: 2.0, water_liters: 3500 },
+    'milk fiber': { score: 70, type: 'Specialty', description: 'Made from waste milk casein.', impact: 'Uses dairy waste but chemical intensive.', water_intensity: 'High', carbon_intensity: 'Medium', biodegradable: 'Yes', carbon_kg: 4.0, water_liters: 6000 },
+    'spider silk': { score: 85, type: 'Specialty', description: 'Lab-grown protein fiber mimicking spider silk.', impact: 'Fermentation based. No animals involved. Strong and biodegradable.', water_intensity: 'Low', carbon_intensity: 'Low', biodegradable: 'Yes', carbon_kg: 2.5, water_liters: 1200 },
+    'recycled ocean plastic': { score: 90, type: 'Recycled', description: 'Plastic harvested from oceans/beaches.', impact: 'Cleans up environment. Energy intensive recycling.', water_intensity: 'Medium', carbon_intensity: 'Low', biodegradable: 'No', carbon_kg: 4.0, water_liters: 250 },
+    'cork': { score: 95, type: 'Natural', description: 'Bark of cork oak. Harvested without killing tree.', impact: 'Trees absorb more CO2 after harvesting. Renewable.', water_intensity: 'Low', carbon_intensity: 'Very Low', biodegradable: 'Yes', carbon_kg: 0.5, water_liters: 1000 },
 };
 
-// Certification database with bonus scores
-const CERTIFICATION_DB = {
-    'gots': {
-        name: 'Global Organic Textile Standard (GOTS)',
-        score: 20, // Bonus points for GOTS
-        description: 'The worldwide leading textile processing standard for organic fibres, including ecological and social criteria, backed up by independent certification of the entire textile supply chain.'
-    },
-    'oeko-tex': {
-        name: 'OEKO-TEX Standard 100',
-        score: 10, // Bonus points for OEKO-TEX
-        description: 'Certifies that textiles and fabrics are free from harmful chemicals.'
-    },
-    'fair trade': {
-        name: 'Fair Trade Certified',
-        score: 15, // Bonus points for Fair Trade
-        description: 'Ensures fair wages, safe working conditions, and community development for farmers and workers.'
-    },
-    'bluesign': {
-        name: 'bluesign APPROVED',
-        score: 15, // Bonus points for bluesign
-        description: 'A system that provides safer and more sustainable environments for people to work in and for everyone to live in.'
-    },
-    'grs': {
-        name: 'Global Recycled Standard (GRS)',
-        score: 10, // Bonus points for GRS
-        description: 'Verifies recycled content in products and responsible social, environmental, and chemical practices in production.'
-    },
-    'peta approved vegan': {
-        name: 'PETA Approved Vegan',
-        score: 5, // Bonus points for PETA
-        description: 'Certifies that no animal products were used in the creation of the item.'
-    },
-    'b corp': {
+// Certification and Ethics database with bonus scores and badge levels
+export const CERTIFICATION_DB = {
+    // === PRESTIGIOUS CERTIFICATIONS (Badge Level) ===
+    'certified b corporation': {
         name: 'Certified B Corporation',
-        score: 10, // Bonus points for B Corp
-        description: 'Certifies that a company meets high standards of verified performance, accountability, and transparency on factors from employee benefits and charitable giving to supply chain practices and input materials.'
+        score: 20,
+        badge: 'prestigious',
+        description: 'Meets the highest standards of verified social and environmental performance, public transparency, and legal accountability to balance profit and purpose.',
+        details: 'B Corps are legally required to consider the impact of their decisions on workers, customers, suppliers, community, and the environment.'
+    },
+    'fair trade certified': {
+        name: 'Fair Trade Certified',
+        score: 18,
+        badge: 'prestigious',
+        description: 'Ensures fair wages, safe working conditions, and sustainable practices for farmers and workers in developing countries.',
+        details: 'Prohibits child labor, forced labor, and discrimination while promoting environmental sustainability and community development.'
+    },
+    'global organic textile standard': {
+        name: 'Global Organic Textile Standard',
+        score: 20,
+        badge: 'prestigious',
+        description: 'The world\'s leading textile processing standard for organic fibers, covering ecological and social criteria throughout the entire supply chain.',
+        details: 'Requires organic status of textiles, prohibits toxic inputs, ensures social compliance, and mandates environmental management.'
+    },
+
+    // === STRONG CERTIFICATIONS ===
+    'bluesign approved': {
+        name: 'bluesign® Approved',
+        score: 15,
+        badge: 'strong',
+        description: 'Ensures responsible use of resources, eliminates harmful substances, and provides safer working environments.',
+        details: 'Covers the entire textile supply chain from raw materials to finished product with strict chemical management.'
+    },
+    'global recycled standard': {
+        name: 'Global Recycled Standard',
+        score: 12,
+        badge: 'strong',
+        description: 'Verifies recycled content in products and tracks responsible social, environmental, and chemical practices.',
+        details: 'Requires minimum 20% recycled content and certification of the entire supply chain.'
+    },
+    'oeko-tex standard 100': {
+        name: 'OEKO-TEX® Standard 100',
+        score: 10,
+        badge: 'strong',
+        description: 'Certifies that textiles are tested and free from harmful substances at every production stage.',
+        details: 'Tests for over 100 harmful substances, going beyond national and international requirements.'
+    },
+    'cradle to cradle certified': {
+        name: 'Cradle to Cradle Certified',
+        score: 15,
+        badge: 'strong',
+        description: 'Measures achievement across five categories: material health, material reuse, renewable energy, water stewardship, and social fairness.',
+        details: 'Products are designed for circular economy, ensuring materials can be safely returned to nature or industry.'
+    },
+
+    // === GOOD CERTIFICATIONS ===
+    'peta-approved vegan': {
+        name: 'PETA-Approved Vegan',
+        score: 8,
+        badge: 'good',
+        description: 'Certifies that no animal-derived materials or by-products were used in manufacturing.',
+        details: 'Ensures cruelty-free production without animal testing or animal-derived ingredients.'
+    },
+    'organic certified': {
+        name: 'Organic Certified',
+        score: 10,
+        badge: 'good',
+        description: 'Materials grown without synthetic pesticides, fertilizers, or GMOs.',
+        details: 'Promotes soil health, biodiversity, and reduces environmental pollution.'
+    },
+    'recycled content': {
+        name: 'Recycled Content',
+        score: 8,
+        badge: 'good',
+        description: 'Contains materials diverted from waste streams and reprocessed into new products.',
+        details: 'Reduces virgin resource extraction and energy consumption.'
+    },
+    'carbon neutral certified': {
+        name: 'Carbon Neutral Certified',
+        score: 10,
+        badge: 'good',
+        description: 'Company offsets 100% of its carbon emissions through verified carbon reduction projects.',
+        details: 'Measures, reduces, and offsets greenhouse gas emissions across operations.'
+    },
+
+    // === NEGATIVE PRACTICES (Warning Level) ===
+    'fast fashion': {
+        name: 'Fast Fashion Model',
+        score: -15,
+        badge: 'warning',
+        description: 'Business model based on rapid production of high volumes of cheap clothing, often with poor labor conditions.',
+        details: 'Contributes to overproduction, waste, and exploitation of workers in developing countries.'
+    },
+    'ultra fast fashion': {
+        name: 'Ultra Fast Fashion',
+        score: -25,
+        badge: 'critical',
+        description: 'Extreme fast fashion with daily new styles, rock-bottom prices, and severe environmental and social concerns.',
+        details: 'Often involves forced labor, toxic chemicals, and massive textile waste. Prioritizes speed and cost over all else.'
+    },
+    'no transparency': {
+        name: 'No Supply Chain Transparency',
+        score: -10,
+        badge: 'warning',
+        description: 'Company does not disclose information about suppliers, working conditions, or environmental practices.',
+        details: 'Lack of transparency often indicates poor labor practices and environmental standards.'
+    },
+    'greenwashing': {
+        name: 'Greenwashing Concerns',
+        score: -8,
+        badge: 'warning',
+        description: 'Misleading marketing claims about environmental benefits without substantive action or verification.',
+        details: 'Uses vague terms like "eco-friendly" without third-party certification or measurable impact.'
     }
 };
 
@@ -409,7 +520,7 @@ const RETAILER_DB = {
 
     // --- Sustainable ---
     'eileenfisher.com': { score: 90, ethics: 'Circular Systems', company: 'Eileen Fisher' },
-    'wearpact.com': { score: 85, ethics: 'Organic Cotton', company: 'Pact' },
+    'wearpact.com': { score: 85, ethics: 'Fair Trade Certified, Global Organic Textile Standard, Organic Certified, Carbon Neutral Certified', company: 'Pact' },
     'wearethought.com': { score: 85, ethics: 'Natural Fabrics', company: 'Thought Clothing' },
     'peopletree.co.uk': { score: 90, ethics: 'Fair Trade Pioneer', company: 'People Tree' },
     'kowtowclothing.com': { score: 90, ethics: 'Fair Trade Organic', company: 'Kowtow' },
@@ -574,18 +685,77 @@ export const recalculateScore = (currentMaterials) => {
         ethicsText = `${retailerData.ethics} • ${certsList.join(', ')}`;
     }
 
-    const carbonValue = Math.round(100 - finalScore + 5);
-    const waterValue = Math.round((100 - finalScore) * 10);
+    // Calculate realistic carbon and water based on materials
+    // Assume average garment weight: 0.3 kg (300g) for most clothing items
+    const GARMENT_WEIGHT_KG = 0.3;
 
-    // Context Logic
-    const carbonContext = carbonValue < 15 ? 'Low' : carbonValue < 40 ? 'Medium' : 'High';
-    const waterContext = waterValue < 300 ? 'Low' : waterValue < 800 ? 'Medium' : 'High';
+    let totalCarbon = 0;
+    let totalWater = 0;
+    let materialsWithData = 0;
 
-    // Comparison Logic (approximate)
+    currentMaterials.forEach(material => {
+        if (material.carbon_kg && material.water_liters) {
+            totalCarbon += material.carbon_kg * GARMENT_WEIGHT_KG;
+            totalWater += material.water_liters * GARMENT_WEIGHT_KG;
+            materialsWithData++;
+        }
+    });
+
+    // Common garment types to detect
+    const PRODUCT_TYPES = [
+        'T-Shirt', 'Shirt', 'Blouse', 'Top', 'Tank Top', 'Polo', 'Sweater', 'Cardigan', 'Hoodie', 'Sweatshirt',
+        'Jeans', 'Pants', 'Trousers', 'Leggings', 'Joggers', 'Shorts', 'Skirt',
+        'Dress', 'Jumpsuit', 'Romper',
+        'Jacket', 'Coat', 'Blazer', 'Vest', 'Parka',
+        'Underwear', 'Bra', 'Panties', 'Boxers', 'Briefs', 'Socks',
+        'Swimwear', 'Bikini', 'Swimsuit',
+        'Shoes', 'Sneakers', 'Boots', 'Sandals', 'Heels',
+        'Bag', 'Backpack', 'Purse', 'Wallet',
+        'Hat', 'Cap', 'Beanie', 'Scarf', 'Gloves'
+    ];
+
+    function detectProductType() {
+        const textToScan = [
+            document.title,
+            document.querySelector('h1')?.innerText,
+            document.querySelector('meta[property="og:title"]')?.content,
+            document.querySelector('meta[name="title"]')?.content
+        ].filter(Boolean).join(' ').toLowerCase();
+
+        // Find the first matching product type (longest match first to avoid partials like "Shirt" matching "T-Shirt")
+        // Sort types by length descending
+        const sortedTypes = [...PRODUCT_TYPES].sort((a, b) => b.length - a.length);
+
+        for (const type of sortedTypes) {
+            if (textToScan.includes(type.toLowerCase())) {
+                return type;
+            }
+        }
+
+        return null;
+    }
+
+    // If we have material data, use it; otherwise fall back to score-based estimate
+    let carbonValue, waterValue;
+    if (materialsWithData > 0) {
+        // Average if multiple materials
+        carbonValue = Math.round(totalCarbon / materialsWithData * 10) / 10;  // Round to 1 decimal
+        waterValue = Math.round(totalWater / materialsWithData);  // Convert to gallons (1L ≈ 0.264 gal, but keeping in liters for now)
+    } else {
+        // Fallback to old formula
+        carbonValue = Math.round(100 - finalScore + 5);
+        waterValue = Math.round((100 - finalScore) * 10);
+    }
+
+    // Context Logic - adjusted for realistic values
+    const carbonContext = carbonValue < 2 ? 'Low' : carbonValue < 5 ? 'Medium' : 'High';
+    const waterContext = waterValue < 1500 ? 'Low' : waterValue < 4000 ? 'Medium' : 'High';
+
+    // Comparison Logic
     // 1 kg CO2e ~ 2.5 miles driving
     const driveMiles = Math.round(carbonValue * 2.5);
-    // 1 shower ~ 20 gallons
-    const showers = Math.round(waterValue / 20);
+    // Convert liters to gallons for shower comparison (1 shower ~ 75 liters)
+    const showers = Math.round(waterValue / 75);
 
     const isKnownRetailer = !!retailerData;
     const hasMaterials = currentMaterials.length > 0 && currentMaterials[0].type !== 'Unknown';
@@ -596,7 +766,7 @@ export const recalculateScore = (currentMaterials) => {
         materials: currentMaterials,
         score: finalScore,
         carbonFootprint: `${carbonValue} kg CO2e`,
-        waterUsage: `${waterValue} gal`,
+        waterUsage: `${waterValue} L`,  // Changed to liters
         metrics: {
             carbon: {
                 value: carbonValue,

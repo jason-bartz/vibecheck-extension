@@ -6,19 +6,19 @@
     "isEntry": true
   },
   "/Users/jasonbartz/.gemini/antigravity/playground/ionized-einstein/vibecheck-extension/src/index.css": {
-    "file": "assets/index-ZXvjEJhF.css",
+    "file": "assets/index-DhxNM6ac.css",
     "src": "/Users/jasonbartz/.gemini/antigravity/playground/ionized-einstein/vibecheck-extension/src/index.css"
   },
   "_client-BsoQGpRC.js": {
     "file": "assets/client-BsoQGpRC.js",
     "name": "client"
   },
-  "_content.jsx-loader-ChBdJZ76.js": {
-    "file": "assets/content.jsx-loader-ChBdJZ76.js",
-    "src": "_content.jsx-loader-ChBdJZ76.js"
+  "_content.jsx-loader-BLrD755G.js": {
+    "file": "assets/content.jsx-loader-BLrD755G.js",
+    "src": "_content.jsx-loader-BLrD755G.js"
   },
   "popup.html": {
-    "file": "assets/popup.html-B_C99qDX.js",
+    "file": "assets/popup.html-BWUWGUZO.js",
     "name": "popup.html",
     "src": "popup.html",
     "isEntry": true,
@@ -26,7 +26,7 @@
       "_client-BsoQGpRC.js"
     ],
     "css": [
-      "assets/index-ZXvjEJhF.css"
+      "assets/index-DhxNM6ac.css"
     ]
   },
   "src/background.js": {
@@ -36,7 +36,7 @@
     "isEntry": true
   },
   "src/content.jsx": {
-    "file": "assets/content.jsx-Bn-SgM8N.js",
+    "file": "assets/content.jsx-BZWXKk2l.js",
     "name": "content.jsx",
     "src": "src/content.jsx",
     "isEntry": true,
@@ -44,7 +44,7 @@
       "_client-BsoQGpRC.js"
     ],
     "assets": [
-      "assets/index-ZXvjEJhF.css"
+      "assets/index-DhxNM6ac.css"
     ]
   }
 }
