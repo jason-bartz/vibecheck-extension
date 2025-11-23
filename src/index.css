@@ -1,0 +1,15 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@400;700&family=Playfair+Display:wght@400;700&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Ensure our styles don't conflict with the page but also reset enough */
+/* Shadow DOM handles isolation */
+:host {
+  all: initial;
+  z-index: 2147483647;
+  position: fixed;
+  bottom: 0;
+  right: 0;
+}

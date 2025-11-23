@@ -1,0 +1,45 @@
+{
+  "manifest_version": 3,
+  "name": "Vibecheck",
+  "version": "1.0.0",
+  "description": "Check the sustainability vibe of your shopping.",
+  "permissions": [
+    "activeTab",
+    "scripting",
+    "storage"
+  ],
+  "host_permissions": [
+    "<all_urls>"
+  ],
+  "action": {
+    "default_popup": "popup.html"
+  },
+  "background": {
+    "service_worker": "service-worker-loader.js",
+    "type": "module"
+  },
+  "content_scripts": [
+    {
+      "js": [
+        "assets/content.jsx-loader-ChBdJZ76.js"
+      ],
+      "matches": [
+        "<all_urls>"
+      ]
+    }
+  ],
+  "web_accessible_resources": [
+    {
+      "matches": [
+        "<all_urls>"
+      ],
+      "resources": [
+        "assets/*",
+        "assets/index-ZXvjEJhF.css",
+        "assets/client-BsoQGpRC.js",
+        "assets/content.jsx-Bn-SgM8N.js"
+      ],
+      "use_dynamic_url": false
+    }
+  ]
+}
