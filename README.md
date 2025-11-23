@@ -1,16 +1,41 @@
-# React + Vite
+# Vibecheck Chrome Extension 🌿
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+An elegant Chrome extension for checking the sustainability of clothing products.
 
-Currently, two official plugins are available:
+## Features
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+- **Material Scanning**: Automatically detects clothing materials from product pages
+- **Sustainability Scoring**: A-F grading system for companies and materials
+- **Contextual Metrics**: Carbon and water usage with real-world comparisons
+- **Smart Detection**: Auto-hides on non-clothing sites
+- **Elegant Design**: Earth-toned aesthetic with custom leaf logo
 
-## React Compiler
+## Installation
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+1. Download or clone this repository
+2. Open Chrome and navigate to `chrome://extensions`
+3. Enable "Developer mode" in the top right
+4. Click "Load unpacked" and select the `dist-v2` folder
 
-## Expanding the ESLint configuration
+## Development
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+```bash
+# Install dependencies
+npm install
+
+# Build the extension
+npm run build
+
+# The built extension will be in the dist-v2 folder
+```
+
+## Tech Stack
+
+- React + Vite
+- TailwindCSS
+- Lucide React Icons
+- Chrome Extension APIs
+
+## License
+
+MIT
